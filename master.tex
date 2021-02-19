@@ -1,0 +1,62 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage{etoolbox}
+\usepackage[symbol]{footmisc}
+%\usepackage{lmodern}
+\usepackage[margin=2.5cm, marginpar = 2cm]{geometry}
+\usepackage{hyperref}
+\usepackage[section, boxed, prob-boxed, dem-boxed]{zeus}
+\usepackage{mathtools}
+\usepackage[only, mapsfrom]{stmaryrd}
+\usepackage{parskip}
+\usepackage{soul}
+\usepackage{todonotes}
+\setlist{nosep, noitemsep, label = (\textit{\roman*})}
+
+\title{\sffamily \bfseries Intro to Economics Lecture Notes}
+\author{\sc Guilherme Zeus Dantas e Moura\\\href{mailto:gdantasemo@haverford.edu}{\texttt{gdantasemo@haverford.edu}}}
+\date{Haverford --- Spring 2021\\[3pt] Last update: \today}
+
+\newcommand{\lecture}[3]{
+	%\newpage
+	%\section{#3 (#2)}
+	\todo[bordercolor = gray!30!white, backgroundcolor = gray!30!white, noline]{\scalebox{.65}{\sf #2}}
+}
+
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\newcommand{\correct}[2]{\textcolor{Red!90!black}{\st{#1}} \textcolor{ForestGreen}{#2}}
+\newcommand{\signexpl}[3]{\underset{\substack{\uparrow\\\mathrlap{\text{\hspace{#3}#2}}}}{#1}}
+
+\pdfsuppresswarningpagegroup=1
+
+\DeclareMathOperator{\ex}{ex}
+\DeclareMathOperator{\Var}{Var}
+
+\begin{document}
+    \maketitle
+	\sloppy
+
+	These are the lecture notes for Bryn Mawr College's undergraduate ECON B105, named Introduction to Economics, instructed by Dr. M. Clarke. All errors are my responsability.
+	
+	Use these notes only as a guide.
+
+	This class is being taugh remotely via Zoom.
+	
+	\tableofcontents
+
+	\newpage
+	% start lectures
+    \input{lec_01.tex}
+    \input{lec_02.tex}
+	% end lectures
+\end{document}
